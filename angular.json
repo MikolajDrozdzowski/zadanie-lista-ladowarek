@@ -24,7 +24,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng-lts/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng-lts/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -61,7 +64,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lista-ladowarek:build"
+            "browserTarget": "lista-ladowarek:build",
+            "proxyConfig": "/Users/mikolaj/Documents/projects/lista-ladowarek/proxy.conf.json"
           },
           "configurations": {
             "production": {

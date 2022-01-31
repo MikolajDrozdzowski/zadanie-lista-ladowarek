@@ -1,0 +1,70 @@
+{
+  "content": [
+    {
+      "id": 1,
+      "chargePointId": "QP-1",
+      "name": "ChargePoint1",
+      "shortName": "cp1",
+      "maximumPower": 1000,
+      "groupName": "Group1",
+      "firmwareVersion": "v1.1"
+    },
+    {
+      "id": 2,
+      "chargePointId": "QP-2",
+      "name": "ChargePoint2",
+      "shortName": "cp2",
+      "maximumPower": 2000,
+      "groupName": "Group1",
+      "firmwareVersion": "v1.2"
+    },
+    {
+      "id": 3,
+      "chargePointId": "QP-3",
+      "name": "ChargePoint3",
+      "shortName": "cp3",
+      "maximumPower": 3000,
+      "groupName": "Group1",
+      "firmwareVersion": "v1.3"
+    },
+    {
+      "id": 4,
+      "chargePointId": "QP-4",
+      "name": "ChargePoint4",
+      "shortName": "cp4",
+      "maximumPower": 4000,
+      "groupName": "Group1",
+      "firmwareVersion": "v1.4"
+    },
+    {
+      "id": 5,
+      "chargePointId": "QP-5",
+      "name": "ChargePoint5",
+      "shortName": "cp5",
+      "maximumPower": 5000,
+      "groupName": "Group2",
+      "firmwareVersion": "v1.5"
+    },
+    {
+      "id": 6,
+      "chargePointId": "QP-6",
+      "name": "ChargePoint6",
+      "shortName": "cp6",
+      "maximumPower": 6000,
+      "groupName": "Group2",
+      "firmwareVersion": "v1.6"
+    },
+    {
+      "id": 7,
+      "chargePointId": "QP-7",
+      "name": "ChargePoint7",
+      "shortName": "cp7",
+      "maximumPower": 7000,
+      "groupName": "Group2",
+      "firmwareVersion": "v1.7"
+    }
+  ],
+  "totalCount": [
+    10
+  ]
+}

@@ -1,0 +1,46 @@
+<p-card>
+  <ng-template pTemplate="header">
+    {{ charger.name }}
+</ng-template>
+  <div >
+    <p>{{ charger.chargePointId }}</p>
+    <p>{{ charger.name }}</p>
+    <p>{{ charger.shortName }}</p>
+    <p>{{ charger.maximumPower }}</p>
+    <p>{{ charger.groupName }}</p>
+    <p>{{ charger.firmwareVersion }}</p>
+    <button class='submit p-button-raised p-button-rounded' pButton (click)="onDelete(charger)">Delete</button>
+    <button class='submit p-button-raised p-button-rounded' pButton>Edit</button>
+  </div>
+</p-card>
+
+
+<!-- <form>
+    <div>
+      <label for="lastname">Charge Point Id</label>
+      <input name='chargePointId'  id="lastname" type="text" required/>
+    </div>
+    <div>
+      <label for="firstname">Firmware Version</label>
+      <input name='firmwareVersion'  id="firstname" type="text" required/>
+    </div>
+    <div>
+      <label for="lastname">Group Name</label>
+      <input name='groupName' id="lastname" type="text" required/>
+    </div>
+    <div>
+      <label for="firstname">Maximum Power</label>
+      <input name='maximumPower' type="number"  required/>
+    </div>
+    <div>
+      <label for="lastname">Name</label>
+      <input name='name'  id="lastname" type="text" required/>
+    </div>
+    <div>
+      <label for="lastname">Short Name</label>
+      <input name='shortName' id="lastname" type="text" required/>
+    </div>
+    <input type="submit" value="Add New Charger" />
+  </form> -->
+
+

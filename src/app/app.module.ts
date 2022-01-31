@@ -7,6 +7,9 @@ import {ButtonModule} from 'primeng-lts/button';
 import { FormsModule } from '@angular/forms';
 import {FieldsetModule} from 'primeng-lts/fieldset';
 import {CardModule} from 'primeng-lts/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AccordionModule} from 'primeng-lts/accordion';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -30,7 +33,9 @@ import { ChargerComponent } from './components/charger/charger.component';
     HttpClientModule,
     FormsModule,
     FieldsetModule,
-    CardModule
+    CardModule,
+    BrowserAnimationsModule,
+    AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

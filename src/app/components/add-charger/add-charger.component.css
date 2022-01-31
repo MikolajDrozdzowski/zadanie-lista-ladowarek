@@ -1,9 +1,6 @@
 .form-add {
     display: flex;
-    flex-direction: column;
-    border-radius: 40px;
-    border: 2px solid white;
-    padding: 2rem;
+    justify-content: space-around;
 }
 
 .input-container {
@@ -14,6 +11,13 @@
 
 .submit {
     margin: 0 auto;
-    margin-top: 1rem;
-    width: 70%;
+    margin-top: 2rem;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    border: 2px solid white;
+    padding: 2rem;
   }

@@ -1,18 +1,70 @@
-<p-card>
+<div class=charger-item>
+<p-fieldset>
   <ng-template pTemplate="header">
     {{ charger.name }}
-</ng-template>
-  <div >
-    <p>{{ charger.chargePointId }}</p>
-    <p>{{ charger.name }}</p>
-    <p>{{ charger.shortName }}</p>
-    <p>{{ charger.maximumPower }}</p>
-    <p>{{ charger.groupName }}</p>
-    <p>{{ charger.firmwareVersion }}</p>
-    <button class='submit p-button-raised p-button-rounded' pButton (click)="onDelete(charger)">Delete</button>
-    <button class='submit p-button-raised p-button-rounded' pButton>Edit</button>
+  </ng-template>
+  <div class="charger-info">
+    <div class='charger-properties'>
+      <div><b>Charger Point:</b> {{ charger.chargePointId }}</div>
+      <div><b>Short Name:</b> {{ charger.shortName }}</div>
+      <div><b>Maximum Power:</b> {{ charger.maximumPower }}</div>
+      <div><b>Group Name:</b> {{ charger.groupName }}</div>
+      <div><b>Firmware Version:</b> {{ charger.firmwareVersion }}</div>
+    </div>
+    <div class="buttons">
+      <button
+        class="submit p-button-raised p-button-rounded"
+        pButton
+        (click)="onDelete(charger)"
+      >
+        Delete Charger
+      </button>
+      <!-- <button class="submit p-button-raised p-button-rounded" pButton>
+        Edit Charger ...
+      </button> -->
+    </div>
   </div>
-</p-card>
+</p-fieldset>
+<p-accordion [multiple]="true">
+  <p-accordionTab header="Edit Charger">
+    <form>
+      <div>
+      <div>
+      <div class='edit-input-container'> 
+        <label for="lastname">Name</label>
+        <input class="p-inputtext-sm" name='name' id="lastname" type="text" pInputText >
+      </div>
+      <div class='edit-input-container'>
+        <label for="lastname">Short Name</label>
+        <input  class="p-inputtext-sm" name='shortName' id="lastname" type="text" pInputText/>
+      </div>
+      <div class='edit-input-container'>
+        <label for="lastname">Charge Point Id</label>
+        <input class="p-inputtext-sm" name='chargePointId' id="lastname" type="text" pInputText />
+      </div>
+      </div>
+      <div>
+      <div class='edit-input-container'>
+        <label for="firstname">Firmware Version</label>
+        <input class="p-inputtext-sm" name='firmwareVersion' id="firstname" type="text" pInputText/>
+      </div>
+      <div class='edit-input-container'>
+        <label for="lastname">Group Name</label>
+        <input class="p-inputtext-sm" name='groupName' id="lastname" type="text" pInputText/>
+      </div>
+      <div class='edit-input-container'>
+        <label for="firstname">Maximum Power</label>
+        <p-inputNumber size='6' class='number-input' min='0' name='maximumPower' type="number" [showButtons]="true" mode="decimal" [step]='500'></p-inputNumber>
+      </div>
+      </div>
+    </div>
+      <input class='submit p-button-raised p-button-rounded' pButton type="submit" value="Edit Charger" />
+    </form>
+  </p-accordionTab>
+</p-accordion>
+</div>
+
+
 
 
 <!-- <form>
@@ -42,5 +94,3 @@
     </div>
     <input type="submit" value="Add New Charger" />
   </form> -->
-
-

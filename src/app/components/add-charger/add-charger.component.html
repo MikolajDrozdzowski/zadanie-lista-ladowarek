@@ -1,7 +1,9 @@
-<form (ngSubmit)="onSubmit()" class='form-add'>
+<form (ngSubmit)="onSubmit()" class='form-container'>
+  <div class='form-add'>
+  <div class='form-left'>
   <div class='input-container'> 
     <label for="lastname">Name</label>
-    <input class="p-inputtext-sm" name='name' [(ngModel)]="name" id="lastname" type="text" pInputText>
+    <input class="p-inputtext-sm" name='name' [(ngModel)]="name" id="lastname" type="text" pInputText >
   </div>
   <div class='input-container'>
     <label for="lastname">Short Name</label>
@@ -11,6 +13,8 @@
     <label for="lastname">Charge Point Id</label>
     <input class="p-inputtext-sm" name='chargePointId' [(ngModel)]="chargePointId" id="lastname" type="text" pInputText />
   </div>
+  </div>
+  <div class='form-right'>
   <div class='input-container'>
     <label for="firstname">Firmware Version</label>
     <input class="p-inputtext-sm" name='firmwareVersion' [(ngModel)]="firmwareVersion" id="firstname" type="text" pInputText/>
@@ -21,10 +25,13 @@
   </div>
   <div class='input-container'>
     <label for="firstname">Maximum Power</label>
-    <p-inputNumber name='maximumPower' type="number" [(ngModel)]="maximumPower" [showButtons]="true" mode="decimal" [step]='500'></p-inputNumber>
+    <p-inputNumber min='0' name='maximumPower' type="number" [(ngModel)]="maximumPower" [showButtons]="true" mode="decimal" [step]='500'></p-inputNumber>
   </div>
+  </div>
+</div>
   <input class='submit p-button-raised p-button-rounded' pButton type="submit" value="Add New Charger" />
 </form>
+
 
 <!-- <div class="p-fluid p-formgrid p-grid" >
   <div class="p-field p-col-12 p-md-6">

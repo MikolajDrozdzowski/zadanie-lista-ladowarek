@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Charger } from 'src/app/Interfaces';
 
 @Component({
   selector: 'app-charger',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChargerComponent implements OnInit {
   @Input() charger
-  @Output() onDeleteCharger: EventEmitter<any> = new EventEmitter();
+  @Output() onDeleteCharger: EventEmitter<Charger> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {

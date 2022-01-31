@@ -7,3 +7,8 @@ export interface Charger {
     groupName: string;
     firmwareVersion: string;
 }
+
+export interface Response {
+    content: Charger[];
+    totalCount: number;
+}

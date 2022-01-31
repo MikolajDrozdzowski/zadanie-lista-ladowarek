@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Charger, Response } from '../Interfaces';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,25 +14,25 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ChargersService {
-  private apiUrl = 'http://localhost:5000/content';
-  // private apiUrl = '/api/charge-points';
+  
+  private apiUrl = '/api/charge-points';
   constructor(
     private http: HttpClient
   ) { }
 
-  getChargers(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  getChargers(): Observable<Response> {
+    return this.http.get<Response>(this.apiUrl);
   }
 
-  deleteCharger(charger: any): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${charger.id}`);
+  deleteCharger(charger: Charger): Observable<Charger> {
+    return this.http.delete<Charger>(`${this.apiUrl}/${charger.id}`);
   }
 
-  addCharger(charger: any): Observable<any>  {
-    return this.http.post(this.apiUrl, charger, httpOptions)
+  addCharger(charger: Charger): Observable<Charger>  {
+    return this.http.post<Charger>(this.apiUrl, charger, httpOptions)
   }
 
-  updateCharger(charger: any): Observable<any>  {
-    return this.http.put(`${this.apiUrl}/${charger.id}`, charger, httpOptions)
+  updateCharger(charger: Charger): Observable<Charger>  {
+    return this.http.put<Charger>(`${this.apiUrl}/${charger.id}`, charger, httpOptions)
   }
 }

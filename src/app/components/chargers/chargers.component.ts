@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { discardPeriodicTasks } from '@angular/core/testing';
+import { Charger } from 'src/app/Interfaces';
 import { ChargersService } from 'src/app/services/chargers.service';
 
 @Component({
@@ -16,14 +17,14 @@ export class ChargersComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.chargersService.getChargers().subscribe((chargers) => this.chargers = chargers)
+    this.chargersService.getChargers().subscribe((chargers) => this.chargers = chargers.content)
   }
 
-  deleteCharger(charger: any) {
+  deleteCharger(charger: Charger) {
     this.chargersService.deleteCharger(charger).subscribe(() => this.chargers = (this.chargers.filter(c => c.id !== charger.id)));
   }
 
-  addCharger(charger: any) {
+  addCharger(charger: Charger) {
     this.chargersService.addCharger(charger).subscribe((charger) => (this.chargers.push(charger)))
   }
 

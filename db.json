@@ -62,9 +62,34 @@
       "maximumPower": 7000,
       "groupName": "Group2",
       "firmwareVersion": "v1.7"
+    },
+    {
+      "id": 8,
+      "chargePointId": "QP-8",
+      "name": "ChargePoint8",
+      "shortName": "cp8",
+      "maximumPower": 8000,
+      "groupName": "Group2",
+      "firmwareVersion": "v1.8"
+    },
+    {
+      "id": 9,
+      "chargePointId": "QP-9",
+      "name": "ChargePoint9",
+      "shortName": "cp9",
+      "maximumPower": 9000,
+      "groupName": "Group2",
+      "firmwareVersion": "v1.9"
+    },
+    {
+      "id": 10,
+      "chargePointId": "QP-10",
+      "name": "ChargePoint10",
+      "shortName": "cp10",
+      "maximumPower": 10000,
+      "groupName": "Group2",
+      "firmwareVersion": "v1.10"
     }
   ],
-  "totalCount": [
-    10
-  ]
+  "totalCount": [10]
 }

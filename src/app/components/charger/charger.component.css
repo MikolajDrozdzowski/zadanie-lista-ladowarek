@@ -1,0 +1,25 @@
+.charger-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.charger-item {
+  margin-top: 1.2rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.edit-input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .number-input {
+  width: 3rem;
+} */
+.charger-properties {
+  font-size: 1.1rem;
+}

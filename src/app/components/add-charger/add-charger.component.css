@@ -1,23 +1,35 @@
 .form-add {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .input-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }
 
 .submit {
-    margin: 0 auto;
-    margin-top: 2rem;
-  }
+  margin: 0 auto;
+  margin-top: 2rem;
+}
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+  border: 2px solid white;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 700px) {
   .form-container {
-    display: flex;
-    flex-direction: column;
-    border-radius: 40px;
-    border: 2px solid white;
-    padding: 2rem;
+    padding: 0;
+    border: none;
+    width: 90%;
+    margin-left: 1rem;
   }
+  .form-add {
+    flex-direction: column;
+  }
+}

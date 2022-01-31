@@ -5,20 +5,16 @@ import { Charger, Response } from '../Interfaces';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json'
-  })
-}
-
+    'Content-Type': 'application/json',
+  }),
+};
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ChargersService {
-  
   private apiUrl = '/api/charge-points';
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) {}
 
   getChargers(): Observable<Response> {
     return this.http.get<Response>(this.apiUrl);
@@ -28,11 +24,15 @@ export class ChargersService {
     return this.http.delete<Charger>(`${this.apiUrl}/${charger.id}`);
   }
 
-  addCharger(charger: Charger): Observable<Charger>  {
-    return this.http.post<Charger>(this.apiUrl, charger, httpOptions)
+  addCharger(charger: Charger): Observable<Charger> {
+    return this.http.post<Charger>(this.apiUrl, charger, httpOptions);
   }
 
-  updateCharger(charger: Charger): Observable<Charger>  {
-    return this.http.put<Charger>(`${this.apiUrl}/${charger.id}`, charger, httpOptions)
+  updateCharger(charger: Charger): Observable<Charger> {
+    return this.http.put<Charger>(
+      `${this.apiUrl}/${charger.id}`,
+      charger,
+      httpOptions
+    );
   }
 }

@@ -4,7 +4,7 @@ import { Charger } from 'src/app/Interfaces';
 @Component({
   selector: 'app-add-charger',
   templateUrl: './add-charger.component.html',
-  styleUrls: ['./add-charger.component.css']
+  styleUrls: ['./add-charger.component.css'],
 })
 export class AddChargerComponent implements OnInit {
   @Output() onAddCharger: EventEmitter<Charger> = new EventEmitter();
@@ -16,10 +16,9 @@ export class AddChargerComponent implements OnInit {
   groupName: string;
   firmwareVersion: string;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onSubmit() {
     if (!this.chargePointId) {
@@ -39,11 +38,11 @@ export class AddChargerComponent implements OnInit {
       return;
     }
     if (!this.groupName) {
-      alert('Please enter a text Group Name');
+      alert('Please enter a text for Group Name');
       return;
     }
     if (!this.firmwareVersion) {
-      alert('Please enter a text Firmware Version');
+      alert('Please enter a text for Firmware Version');
       return;
     }
 
@@ -53,20 +52,16 @@ export class AddChargerComponent implements OnInit {
       shortName: this.shortName,
       maximumPower: this.maximumPower,
       groupName: this.groupName,
-      firmwareVersion: this.firmwareVersion
-    }
+      firmwareVersion: this.firmwareVersion,
+    };
 
     this.onAddCharger.emit(newCharger);
-    
+
     this.chargePointId = '';
     this.name = '';
     this.shortName = '';
     this.maximumPower = 0;
     this.groupName = '';
     this.firmwareVersion = '';
-
-    
-
   }
-
 }

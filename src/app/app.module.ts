@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import {InputTextModule} from 'primeng-lts/inputtext';
-import {InputNumberModule} from 'primeng-lts/inputnumber';
-import {ButtonModule} from 'primeng-lts/button';
+import { InputTextModule } from 'primeng-lts/inputtext';
+import { InputNumberModule } from 'primeng-lts/inputnumber';
+import { ButtonModule } from 'primeng-lts/button';
 import { FormsModule } from '@angular/forms';
-import {FieldsetModule} from 'primeng-lts/fieldset';
-import {CardModule} from 'primeng-lts/card';
+import { FieldsetModule } from 'primeng-lts/fieldset';
+import { CardModule } from 'primeng-lts/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {AccordionModule} from 'primeng-lts/accordion';
-
+import { AccordionModule } from 'primeng-lts/accordion';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -23,7 +22,7 @@ import { ChargerComponent } from './components/charger/charger.component';
     HeaderComponent,
     AddChargerComponent,
     ChargersComponent,
-    ChargerComponent
+    ChargerComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,9 +34,9 @@ import { ChargerComponent } from './components/charger/charger.component';
     FieldsetModule,
     CardModule,
     BrowserAnimationsModule,
-    AccordionModule
+    AccordionModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

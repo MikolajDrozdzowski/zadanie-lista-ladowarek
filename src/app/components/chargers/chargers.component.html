@@ -1,11 +1,10 @@
-<div class='chargers'>
-<app-add-charger (onAddCharger)='addCharger($event)' ></app-add-charger>
-<div class='list'>
-<app-charger
-  *ngFor="let charger of chargers"
-  [charger]="charger"
-  (onDeleteCharger)="deleteCharger(charger)"
-></app-charger>
+<div class="chargers">
+  <app-add-charger (onAddCharger)="addCharger($event)"></app-add-charger>
+  <div class="list">
+    <app-charger
+      *ngFor="let charger of chargers"
+      [charger]="charger"
+      (onDeleteCharger)="deleteCharger(charger)"
+    ></app-charger>
+  </div>
 </div>
-</div>
-

@@ -4,18 +4,16 @@ import { Charger } from 'src/app/Interfaces';
 @Component({
   selector: 'app-charger',
   templateUrl: './charger.component.html',
-  styleUrls: ['./charger.component.css']
+  styleUrls: ['./charger.component.css'],
 })
 export class ChargerComponent implements OnInit {
-  @Input() charger
+  @Input() charger: Charger;
   @Output() onDeleteCharger: EventEmitter<Charger> = new EventEmitter();
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-  
-  onDelete(charger) {
+  ngOnInit(): void {}
+
+  onDelete(charger: Charger) {
     this.onDeleteCharger.emit(charger);
   }
-
 }

@@ -32,4 +32,11 @@ export class ChargersComponent implements OnInit {
       (error) => alert('Server error')
     );
   }
+
+  updateCharger(charger: Charger) {
+    this.chargersService.updateCharger(charger).subscribe(
+      () => console.log('added successfully'),
+      (error) => alert('Server error')
+    );
+  }
 }

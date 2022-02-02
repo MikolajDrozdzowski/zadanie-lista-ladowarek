@@ -9,6 +9,10 @@ import { FieldsetModule } from 'primeng-lts/fieldset';
 import { CardModule } from 'primeng-lts/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionModule } from 'primeng-lts/accordion';
+import {MessagesModule} from 'primeng-lts/messages';
+import {MessageModule} from 'primeng-lts/message';
+import {ToastModule} from 'primeng-lts/toast';
+import { MessageService } from 'primeng-lts/api';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -35,8 +39,11 @@ import { ChargerComponent } from './components/charger/charger.component';
     CardModule,
     BrowserAnimationsModule,
     AccordionModule,
+    MessagesModule,
+    MessageModule,
+    ToastModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

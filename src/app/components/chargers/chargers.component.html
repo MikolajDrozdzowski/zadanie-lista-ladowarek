@@ -5,6 +5,7 @@
       *ngFor="let charger of chargers"
       [charger]="charger"
       (onDeleteCharger)="deleteCharger(charger)"
+      (onUpdateCharger)='updateCharger(charger)'
     ></app-charger>
   </div>
 </div>

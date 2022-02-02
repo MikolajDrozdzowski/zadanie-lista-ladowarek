@@ -24,7 +24,7 @@
   </p-fieldset>
   <p-accordion [multiple]="true">
     <p-accordionTab header="Edit Charger">
-      <form>
+      <form #form="ngForm" (ngSubmit)="onUpdate(form)">
         <div>
           <div>
             <div class="edit-input-container">
@@ -35,6 +35,7 @@
                 id="lastname"
                 type="text"
                 pInputText
+                [(ngModel)]="charger.name"
               />
             </div>
             <div class="edit-input-container">
@@ -45,6 +46,7 @@
                 id="lastname"
                 type="text"
                 pInputText
+                [(ngModel)]="charger.shortName"
               />
             </div>
             <div class="edit-input-container">
@@ -55,6 +57,7 @@
                 id="lastname"
                 type="text"
                 pInputText
+                [(ngModel)]="charger.chargePointId"
               />
             </div>
           </div>
@@ -67,6 +70,7 @@
                 id="firstname"
                 type="text"
                 pInputText
+                [(ngModel)]="charger.firmwareVersion"
               />
             </div>
             <div class="edit-input-container">
@@ -77,6 +81,7 @@
                 id="lastname"
                 type="text"
                 pInputText
+                [(ngModel)]="charger.groupName"
               />
             </div>
             <div class="edit-input-container">
@@ -90,6 +95,7 @@
                 [showButtons]="true"
                 mode="decimal"
                 [step]="500"
+                [(ngModel)]="charger.maximumPower"
               ></p-inputNumber>
             </div>
           </div>
@@ -98,9 +104,11 @@
           class="submit p-button-raised p-button-rounded"
           pButton
           type="submit"
-          value="Edit Charger"
+          value="Save Changes"
+          (click)="addSingle()"
         />
       </form>
     </p-accordionTab>
   </p-accordion>
+  <p-toast></p-toast>
 </div>
